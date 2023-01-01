@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>다이어리 쓰기</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
 </head>
 <body>
-    다이어리 쓰기
+    <div id="editor"></div>
+
 </body>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 </html>
