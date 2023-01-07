@@ -14,8 +14,6 @@ class BcryptTest {
 
         System.out.println(encryptedPassword);
 
-        // 푸시 테스트 ..
-
     }
 
 
