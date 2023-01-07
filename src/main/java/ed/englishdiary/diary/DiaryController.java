@@ -1,5 +1,7 @@
 package ed.englishdiary.diary;
 
+import ed.englishdiary.diary.domain.Account;
+import ed.englishdiary.diary.service.DiaryService;
 import ed.englishdiary.diary.vo.DiaryListFilterDto;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.stereotype.Controller;
@@ -14,9 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 public class DiaryController {
 
     private final MessageSourceAccessor messageSource;
+    private final DiaryService diaryService;
 
-    public DiaryController(MessageSourceAccessor messageSource) {
+    public DiaryController(MessageSourceAccessor messageSource, DiaryService diaryService) {
         this.messageSource = messageSource;
+        this.diaryService = diaryService;
     }
 
     @GetMapping("/list")
@@ -34,6 +38,9 @@ public class DiaryController {
 
     @GetMapping("/write")
     public String writeDiary() {
+        Account account = new Account();
+        account.setId(1L);
+        diaryService.saveDiary(account);
 
         return "diary/writeDiary";
     }
