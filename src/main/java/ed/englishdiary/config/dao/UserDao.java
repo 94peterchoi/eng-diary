@@ -16,7 +16,7 @@ public class UserDao {
     private final static List<UserDetails> APPLICATION_USERS = Arrays.asList(
             new User(
                     "choisang08@naver.com",
-                    "sksnzm62",
+                    "$2a$10$Nwt5d4r8VowBBQcAdSutduSyQvSg3gt6w3iELhVwi9AoBSA7Gn0De",   // sksnzm62
                     Collections.singleton(new SimpleGrantedAuthority("ROLE_ADMIN"))
             ),
             new User(

@@ -16,7 +16,7 @@ public class JwtUtil {
 
     // TODO: deprecated 된 메소드들 해결하기
 
-    private String SECRET_KEY = "59BBB72D2CFC713737ED67A38E89BASDASFASFASFASFASFASF";
+    private String SECRET_KEY = "WRITINGDIARYISPOWERFULWRITINGDIARYISPOWERFULWRITINGDIARYISPOWERFULWRITINGDIARYISPOWERFUL";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
