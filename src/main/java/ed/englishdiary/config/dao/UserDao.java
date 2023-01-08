@@ -21,7 +21,7 @@ public class UserDao {
             ),
             new User(
                     "gddb@naver.com",
-                    "dabi12",
+                    "$2a$10$5vqJLrvG/ozIVoxSJa0oR.6niF/.ahXmCfutdOblz154euuQ1IX2q",   // dabi12@
                     Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
             )
     );

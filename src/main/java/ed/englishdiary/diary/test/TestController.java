@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-    @RequestMapping("/test/auth/authForm")
+    @RequestMapping("/test/auth/login")
     public String authTest() {
 
         return "test/authTest";
