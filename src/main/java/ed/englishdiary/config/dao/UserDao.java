@@ -1,5 +1,6 @@
 package ed.englishdiary.config.dao;
 
+import ed.englishdiary.auth.CustomUserDetails;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,6 +28,15 @@ public class UserDao {
     );
 
     public UserDetails findUserByEmail(String email) {
+
+        if (email.equals("choisang08@naver.com")) {
+            CustomUserDetails cud = new CustomUserDetails();
+            cud.setUsername(email);
+            cud.setPassword("$2a$10$Nwt5d4r8VowBBQcAdSutduSyQvSg3gt6w3iELhVwi9AoBSA7Gn0De");
+            cud.setAuthorities(Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")));
+            return cud;
+        }
+
         return APPLICATION_USERS
                 .stream()
                 .filter(u -> u.getUsername().equals(email))
